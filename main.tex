@@ -1,0 +1,390 @@
+% ignore badness warnings
+\hbadness=10000
+% Default font size, values from 8-12pt are recommended
+\documentclass[9pt]{developercv} 
+\begin{document}
+%	TITLE AND CONTACT INFORMATION
+% 36% of the page width for name
+\begin{minipage}[t]{0.36\textwidth}
+	\vspace{-\baselineskip}
+	% Required for vertically aligning minipages
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Mansour}}}}} % First name
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Mahboubi}}}}} % Last name
+	\vspace{6pt}
+
+	% Career or current job title
+	% 	{\huge\textbf IT engineer} 
+
+	{\huge\textbf Software engineer} % Career or current job title
+\end{minipage}
+% 27.5% of the page width for the first row of icons
+\begin{minipage}[t]{0.35\textwidth}
+	% Required for vertically aligning minipages
+	\vspace{-\baselineskip}
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	\icon{MapMarker}{12}{Tehran / Iran}\\
+	\icon{Phone}{12}{+33749455070}\\
+	\icon{At}{12}{\href{mailto:mansourmahboubi@outlook.com}{mansourmahboubi@protonmail}}\\
+	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/mansourmahboubi/}{mansourmahboubi}}\\
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\icon{Globe}{12}{\href{https://mans0ur.me}{mans0ur.me}}\\
+	\icon{Github}{12}{\href{https://github.com/mmans0ur}{github.com/mmans0ur}}\\
+	\icon{Twitter}{12}{\href{https://twitter.com/@mans0urplus}{@mans0urplus}}\\
+	\icon{BirthdayCake}{12}{1995/05/14}\\
+\end{minipage}
+
+\vspace{0.5cm}
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+\cvsect{Who Am I?}
+
+\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+
+
+	I started my career when I began to learn Gnu/Linux. then Opensource technologies become my first interest.
+	In the past years, I worked on data-oriented applications with Python, Django, React, Tensorflow and many other tools. I worked in Education  industry. My interests are in startups and new technologies.  \\
+	\ % Dummy text
+\end{minipage}
+\hfill % Whitespace between
+% \begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+% 	\vspace{-\baselineskip} % Required for vertically aligning minipages
+% 	\begin{barchart}{5.5}
+% 		\baritem{Devops}{50}
+% 			\baritem{Python}{75}
+% 		\baritem{Django}{80}
+% 		\baritem{react}{80}
+% 		\baritem{LPIC-1}{70}
+% 		\baritem{LPIC-2}{70}
+% 		\baritem{Docker}{70}
+% 		\baritem{Git}{70}
+
+% 		\baritem{nodejs}{60}
+% 		\baritem{react-native}{60}
+% % 		\baritem{Java}{30}
+% % 		\baritem{PHP}{10}
+% % 		\baritem{Js}{70}
+% % 		\baritem{CSS,SASS}{70}
+% 		\baritem{SQL}{70}
+% 		\baritem{Mongodb}{50}
+% 		\baritem{LaTeX}{30}
+% 	\end{barchart}
+% \end{minipage}
+
+\begin{center}
+	\bubbles{5/LPIC-1, 3/LPIC-2, 6/Python, 6/Django, 6/React,6/nodejs, 4/git, 4/Devops}
+\end{center}
+
+%	EXPERIENCE
+
+\cvsect{Experience}
+\begin{entrylist}
+	\entry
+	{10/2020 -- now}
+	{Co-founder \& CTO - Full-time}
+	{\href{https://remotion.live/}{Remotion.live - Paris / France }}
+	{Integrated Assessments system to manage online exams in one place  \href{https://remotion.live/}{Find more.} \\
+		-- Responsible for IT infrastructure  \\
+		-- Design and developing an scalable architecture which can handle thousands of requests per second \\
+		-- Managing IT human resources \\
+	}
+\end{entrylist}
+% \begin{entrylist}
+% 	\entry
+% 		{9/2020 -- 5}
+% 		{Co-founder \& CTO}
+% 		{\href{https://www.e-krediidiinfo.ee/16152752-ANABIZZ OÜ}{Anabizz.com - (Tehran / Iran - Tallinn / Estonia)}}
+% 		{Anabizz is an online platform where the most valid laboratories in various fields such as chemistry, metallurgy, biotechnology, food industry, etc. \\
+% 		-- Responsible for IT infrastructure  \\ 
+% 		-- Negotiating with other businesses to design and develop a way for communication between our systems (API) \\
+% 		-- Work directly with marketing section to automate their work through simplest IT solution \\
+% 		-- Managing IT resourses \\
+% 		-- Manage and Monitoring anabizz servers \\ \\ \\
+% 		}
+% \end{entrylist}
+
+
+
+\begin{entrylist}
+	\entry
+	{9/2019 -- 10/2020}
+	{Software engineer - Full-time}
+	{
+		\href{https://www.linkedin.com/company/avid-technology-development/}{AVID Arvand - Tehran / Iran}}
+	{ Avid is an international software company. My main focus in avid was in PUBNiTo Digital Publishing Platform for Books.	 \href{https://pubnito.ca/}{pubnito.ca}\\ \\
+		-- Developing multiple microservices \\
+		-- Leading new developers }
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{6/2019 -- 9/2019}
+	{Django developer - Full-time}
+	{ }
+	{-- Maintainer of PUBNiTo studio \\
+		-- Developing multiple plugins for the online HTML editor and HTML parser  \\
+
+		\texttt{kubernetes}\slashsep\texttt{docker}\slashsep\texttt{django}\slashsep\texttt{nodejs}\slashsep\texttt{react}\slashsep\texttt{postgreSQL}\slashsep\texttt{redis}\slashsep\texttt{celery}\slashsep\texttt{kubernetes}}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{3/2019 -- 5/2020}
+	{Co-founder \& CTO - Part-time}
+	{\href{https://www.e-krediidiinfo.ee/16152752-ANABIZZ OÜ}{Anabizz.com - (Tehran / Iran - Tallinn / Estonia)}}
+	{Anabizz is an online platform where the most valid laboratories in various fields such as chemistry, metallurgy, biotechnology, food industry, etc. \\
+		-- Responsible for IT infrastructure  \\
+		-- Negotiating with other businesses to design and develop a way for communication between systems (API) \\
+		-- Work directly with marketing section to automate their work through simplest IT solution \\
+		-- Manage and Monitoring anabizz servers \\
+	}
+\end{entrylist}
+
+\begin{entrylist}
+	\entry
+	{3/2018 -- 3/2019}
+	{Fullstack python developer - Full-time}
+	{\href{https://mahan.market/}{Mahan.market - Tehran / Iran}}
+	{Mahan is an online grocery store \\
+		-- Design and developing a scalable application for the grocery market.
+
+		\texttt{linux}\slashsep\texttt{django}\slashsep\texttt{react}\slashsep\texttt{postgres}\slashsep\texttt{celery}\slashsep\texttt{nginx}}
+\end{entrylist}\begin{entrylist}
+	\entry
+	{2/2017 -- 2/2018}
+	{Maintainer - Part-time}
+	{\href{https://farsireviews.com/}{farsireviews.com - Rasht / Iran}}
+	{Farsireviews was an online newspaper. I was responsible for site uptime. \\
+		\texttt{linux}\slashsep\texttt{wordpress}\slashsep\texttt{apache}}
+	\\ \\
+\end{entrylist}
+% \begin{entrylist}
+% 	\entry
+% 		{1/2019 -- 6/2019}
+% 		{Teacher Assistant - Introduction to database}
+% 		{ Faculty of engineering}
+% 		{assistant for database course in fall 2019 \\ \texttt{database}\slashsep}
+% \end{entrylist}
+
+% \begin{entrylist}
+% 	\entry
+% 		{1/2018 -- 9/2018}
+% 		{Fullstack python developer}
+% 		{\href{https://virakad.com/}{Virakad.com}}
+% 		{Cofounder, virakad.com was supposed to be a grocery marketplace .\\
+% 		I was fullstack python developer and responsible for IT infra.\\
+% 		find more at {\href{https://virakad.com/}{https://virakad.com/}}\\
+% 		\texttt{linux}\slashsep\texttt{django}\slashsep\texttt{bootstrap}\slashsep\texttt{mysql}\slashsep\texttt{Cpanel}}
+% \end{entrylist}
+
+% \begin{entrylist}
+% 	\entry
+% 		{2017 -- 1/2018}
+% 		{Wordpress developer}
+% 		{\href{https://farsireviews.com/about}{Farsireviews.com}}
+% 		{Cofounder, farsireview was a persian magazine and review producer .\\
+% 		 I was responsible for It Infrastructure.\\
+% 		find more at {\href{https://farsireviews.com/about}{https://farsireviews.com/about}}.\\
+% 		\texttt{wordpress}\slashsep\texttt{php}\slashsep\texttt{bootstrap}\slashsep\texttt{Cpanel}}
+% \end{entrylist}
+% \begin{entrylist}
+% 	\entry
+% 		{2015 -- 2017}
+% 		{member of IT association}
+% 		{ faculty of engineering}
+% 		{\\\\\\\\}
+% \end{entrylist}
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+	{2014 -- 2019}
+	{Bachelor's Degree}
+	{University of Tehran}
+	{Information Technology engineering\\
+		Thesis: Intro to DevOps, and comparing container-based virtualization and serverless
+	}
+\end{entrylist}
+
+\begin{entrylist}
+	\entry
+	{2009 -- 2013}
+	{Graduate Diploma}
+	{Shahed highscool of Rasht (Komeil)}
+	{Mathematics and Physic \\}
+\end{entrylist}
+
+
+\cvsect{Volunteer Experience}
+\begin{entrylist}
+	\entry
+	{}
+	{IT consultant}
+	{Whiteheart charity}
+	{Ghalbe sefid is an Iranian NGO Which is helping labour children. \\
+		-- Design a bot for Institute campaigns \\
+		-- Consultant Institute for IT infrustructure}
+\end{entrylist}
+
+\begin{entrylist}
+	\entry
+	{}
+	{Member of Guilan PUG - gilpug.gitlab.io}
+	{Guilan Python user group}
+	{-- Organizing public sessions \\
+		-- Presenting Intro to Django in the second session
+			{{\href
+						{https://www.instagram.com/p/B89LgJhlW_N/}
+						{Instagram}
+					}}}
+\end{entrylist}
+
+\begin{entrylist}
+	\entry
+	{}
+	{Member of organization team}
+	{Freeland}
+	{Freeland is a public conference which is trying to bring freelancers together
+			{{\href{https://freelanday.ir/}{https://freelanday.ir/}}}
+	}
+\end{entrylist}
+% \cvsect{Freelance Experience}
+% \begin{entrylist}
+% 	\entry
+% 		{2019}
+% 		{React-native developer}
+% 		{{\href{https://www.sakhtafzarmag.com/}{Sakhtafzarmag.com}}}
+% 		{Sakhtafzarmag is an online magazine \\
+% 		-- Developing an RSS reader apllication 
+% 		({\href{https://cafebazaar.ir/app/com.sakhtafzarmag.com}{https://cafebazaar.ir/app/com.sakhtafzarmag.com}})\\
+% 		\texttt{React-native}\slashsep\texttt{Wordpress-REST-Api}}
+% \end{entrylist}
+% \begin{entrylist}
+% 	\entry
+% 		{2020}
+% 		{Team LEAD}
+% 		{{\href{https://www.nilee.app/}{Nilee.app}}}
+% 		{GEO location based mobile application {\href{https://nilee.app}{https://nilee.app}}\\
+% 		\texttt{React-native}\slashsep\texttt{Django}\slashsep\texttt{Redis}\slashsep\texttt{Firebase}}
+% \end{entrylist}
+%	EDUCATION
+
+
+
+\cvsect{BSC projects}
+
+\begin{entrylist}
+	\entry
+	{12/2015}
+	{Advanced Programing}
+	{University of Tehran}
+	{system for managing students in CPP}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{12/2016}
+	{Artificial intelligence}
+	{University of Tehran}
+	{A rival for tic-tac-toe in JAVA}
+\end{entrylist}
+
+\cvsect{Licenses and Certifications}
+\begin{entrylist}
+	\entry
+	{3/2020}
+	{Machine Learning with Python}
+	{Coursera}
+	{{\href{https://www.coursera.org/account/accomplishments/records/8KNW27XHXTVF?utm_medium=Certificate&utm_source=link&utm_campaign=copybutton_Certificate}{Credential ID be53a654782772626b3d4e038d5e53f4j}}
+	}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{2019}
+	{Data Analysis with Python}
+	{Cognitiveclass.ai}
+	{{\href{https://cognitiveclass.ai/courses/data-analysis-python}{Find more}}
+	}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{3/2019}
+	{LPIC-2}
+	{ARJANG institute}
+	{{\href{http://gotoclass.ir/Certificates/e5khkv6brsyr74vwpw3j/}{Certificate ID e5khkv6brsyr74vwpw3j}}
+	}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{1/2018}
+	{LPIC-1}
+	{ARJANG institute}
+	{{\href{http://gotoclass.ir/Certificates/992xzjyjss6ih59y4nvt/}{Certificate ID 992xzjyjss6ih59y4nvt}}
+	}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{12/2017}
+	{Python Programming}
+	{ARJANG institute}
+	{{\href{http://gotoclass.ir/Certificates/se5gmateouym2rorblxw/}{Certificate ID se5gmateouym2rorblxw}}
+	}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{12/2017}
+	{Introduction to writing business plan}
+	{University of Tehran}
+	{A course which I was a member of operation team}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{10/2015}
+	{Introduction to web programming}
+	{University of Tehran}
+	{a course which I was a member of operation team}
+\end{entrylist}
+\begin{entrylist}
+	\entry
+	{10/2015}
+	{Introduction to trading}
+	{Tehran Institute Of Technology}
+	{Amateur trading using technical analysis}
+\end{entrylist}
+
+%	ADDITIONAL INFORMATION
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Languages}
+
+	\textbf{Persian} - native\\\
+	\textbf{English} - proficient\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{military service}
+
+	Guardianship Exemption.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Hobbies}
+
+	I love running, biking and building simpler life using new technologies\\
+	and also I trade in TSE as a hobby.
+\end{minipage}
+\hfill
+
+
+\end{document}

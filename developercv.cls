@@ -209,8 +209,22 @@
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\
 		% Entry description text
 		#4 
-	}\\\\}
+	}\\\\
+}
 
+\newcommand{\entrytwocol}[3]{
+	% 100% of the text width of the page
+	&\parbox[t]{1\textwidth}{
+		% Entry heading text
+		\textbf{#1}
+		% Horizontal whitespace
+		\hfill
+		% Right-aligned entry qualifier text
+		{\footnotesize \textbf{\textcolor{black}{#2}}}\\
+		% Entry description text
+		#3 
+	}\\\\
+}
 % Command to output a separator slash between lists, e.g. '  /  '
 \newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
 

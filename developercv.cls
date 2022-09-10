@@ -229,3 +229,6 @@
 \newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
 
 
+
+% ignore badness warnings
+\hbadness=10000

@@ -2,10 +2,9 @@ name: Build and Release LaTeX
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "v*.*.*"
   workflow_dispatch: # allows manual triggering
-  pull_request:
 
 jobs:
   build-latex:
@@ -25,4 +24,10 @@ jobs:
           name: pdf-files
           path: |
             main.pdf
-          retention-days: 5
+          retention-days: 1
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          files: main.pdf

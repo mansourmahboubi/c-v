@@ -5,6 +5,7 @@ on:
     branches:
       - master
   workflow_dispatch: # allows manual triggering
+  pull_request:
 
 jobs:
   build-latex:

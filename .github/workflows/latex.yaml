@@ -1,0 +1,33 @@
+name: Build and Release LaTeX
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch: # allows manual triggering
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup TeX Live
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Upload PDFs as Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-files
+          path: |
+            main.pdf
+          retention-days: 1
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          files: main.pdf

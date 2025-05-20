@@ -1,0 +1,37 @@
+name: Build and Release LaTeX
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: # allows manual triggering
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup TeX Live
+        uses: xu-cheng/texlive-action@v2
+        with:
+          texlive_version: "2023"
+          scheme: "full" # full scheme includes all LaTeX packages
+
+      - name: Build LaTeX documents
+        run: |
+          # main.tex
+          echo "Building main.tex"
+          pdflatex -interaction=nonstopmode main.tex
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            main.pdf
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -17,7 +17,10 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          args: -jobname=Mansour_MAHBOUBI
+
+      - name: Rename PDF
+        run: |
+          mv main.pdf Mansour_MAHBOUBI.pdf
 
       - name: Upload PDFs as Artifacts
         uses: actions/upload-artifact@v4

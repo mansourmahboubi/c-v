@@ -100,7 +100,7 @@
 % Command to vertically centre adjacent content
 \newcommand{\vcenteredhbox}[1]{% The only parameter is for the content to centre
 	\begingroup%
-		\setbox0=\hbox{#1}\parbox{\wd0}{\box0}%
+	\setbox0=\hbox{#1}\parbox{\wd0}{\box0}%
 	\endgroup%
 }
 
@@ -114,29 +114,29 @@
 \newenvironment{barchart}[1]{ % The only parameter is the maximum bar width, in cm
 	\newcommand{\barwidth}{0.35}
 	\newcommand{\barsep}{0.2}
-	
+
 	% Command to add a bar to the bar chart
 	\newcommand{\baritem}[2]{ % The first argument is the bar label and the second is the percentage the current bar should take up of the total width
 		\pgfmathparse{##2}
 		\let\perc\pgfmathresult
-		
+
 		\pgfmathparse{#1}
 		\let\barsize\pgfmathresult
-		
+
 		\pgfmathparse{\barsize*##2/100}
 		\let\barone\pgfmathresult
-		
+
 		\pgfmathparse{(\barwidth*\thebarcount)+(\barsep*\thebarcount)}
 		\let\barx\pgfmathresult
-		
+
 		\filldraw[fill=black, draw=none] (0,-\barx) rectangle (\barone,-\barx-\barwidth);
-		
+
 		\node [label=180:\colorbox{black}{\textcolor{white}{##1}}] at (0,-\barx-0.175) {};
 		\addtocounter{barcount}{1}
 	}
 	\begin{tikzpicture}
 		\setcounter{barcount}{0}
-}{
+		}{
 	\end{tikzpicture}
 }
 
@@ -151,12 +151,12 @@
 	% Reset counters
 	\setcounter{a}{0}
 	\setcounter{c}{150}
-	
+
 	\begin{tikzpicture}[scale=3]
 		\foreach \p/\t in {#1} {
-			\addtocounter{a}{1}
-			\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
-		}
+				\addtocounter{a}{1}
+				\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
+			}
 	\end{tikzpicture}
 }
 
@@ -189,7 +189,7 @@
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
 	\begin{longtable}[H]{l l}
-}{
+		}{
 	\end{longtable}
 }
 
@@ -197,7 +197,7 @@
 	% 17.5% of the text width of the page
 	\parbox[t]{0.175\textwidth}{
 		% Leftmost entry date(s) text
-		#1 
+		#1
 	}
 	% 82.5% of the text width of the page
 	&\parbox[t]{0.825\textwidth}{
@@ -208,7 +208,7 @@
 		% Right-aligned entry qualifier text
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\
 		% Entry description text
-		#4 
+		#4
 	}\\\\
 }
 
@@ -222,7 +222,7 @@
 		% Right-aligned entry qualifier text
 		{\footnotesize \textbf{\textcolor{black}{#2}}}\\
 		% Entry description text
-		#3 
+		#3
 	}\\\\
 }
 % Command to output a separator slash between lists, e.g. '  /  '

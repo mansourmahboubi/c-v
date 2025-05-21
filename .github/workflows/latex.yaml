@@ -3,7 +3,7 @@ name: Build and Release LaTeX
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*.*"
   workflow_dispatch: # allows manual triggering
 
 jobs:
@@ -17,17 +17,18 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+          args: -jobname=Mansour_MAHBOUBI
 
       - name: Upload PDFs as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: pdf-files
           path: |
-            main.pdf
+            Mansour_MAHBOUBI.pdf
           retention-days: 1
 
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: main.pdf
+          files: Mansour_MAHBOUBI.pdf

@@ -20,18 +20,24 @@ jobs:
 
       - name: Rename PDF
         run: |
-          mv main.pdf Mansour_MAHBOUBI.pdf
+          echo "Renaming PDF"
+          # read tag name and extract the name after last dot
+          tag_name=$(echo $GITHUB_REF | cut -d'.' -f3)
+          file_name=Mansour_MAHBOUBI_${tag_name}.pdf
+          mv main.pdf ${file_name}
+          # store file name to be used in the next steps
+          echo "file_name=${file_name}" >> $GITHUB_OUTPUT
 
       - name: Upload PDFs as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: pdf-files
           path: |
-            Mansour_MAHBOUBI.pdf
+            ${steps.rename-pdf.outputs.file_name}
           retention-days: 1
 
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: Mansour_MAHBOUBI.pdf
+          files: ${steps.rename-pdf.outputs.file_name}
